@@ -11,7 +11,7 @@ namespace NorthWind.Dal
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder
-                .UseSqlServer(@"Server=.\SQL2017;Database=Northwind;Trusted_Connection=true;");
+                .UseSqlServer(@"Server=.\SQL2017;Database=NorthwindPoc;Trusted_Connection=true;");
         }
     }
 }
