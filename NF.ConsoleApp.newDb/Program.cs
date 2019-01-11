@@ -10,7 +10,7 @@ namespace NF.ConsoleApp.newDb
         {
             using (var context  = new NorthWindContext())
             {
-                Console.WriteLine("Proporciona el nombre de la categoria a agregar: ");
+                Console.WriteLine("Proporciona el nombre de la categoria a agregar:>>");
                 var categoryName = Console.ReadLine();
                 var newCategory = new Category
                 {
@@ -19,13 +19,13 @@ namespace NF.ConsoleApp.newDb
 
                 context.Categories.Add(newCategory);
                 var affectedRecords = context.SaveChanges();
-                Console.WriteLine($"{affectedRecords} registro guardado en la base de datos.");
+                Console.WriteLine($"{affectedRecords} registro guardado en la base de datos.>>");
                 Console.WriteLine();
 
                 Console.WriteLine("Categorias en la base de datos:");
                 foreach (var category in context.Categories)
                 {
-                    Console.WriteLine($"{category.CategoryId}, {category.CategoryName}");
+                    Console.WriteLine($"{category.CategoryId}, {category.CategoryName}>>");
                 }
 
                 Console.ReadKey();
